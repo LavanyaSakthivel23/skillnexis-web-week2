@@ -1,0 +1,81 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0a0f1e;
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 30px 10px;
+  background: #080c18;
+  border-bottom: 1px solid #1c2336;
+}
+header h1 { color: white; font-size: 28px; }
+
+main { flex: 1; max-width: 800px; width: 100%; margin: 30px auto; padding: 0 15px; }
+
+.box {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.box:hover { transform: translateY(-5px); border-color: #8b5cf6; }
+.box h2 { color: #a78bfa; margin-bottom: 15px; }
+
+#clock {
+  font-family: "Courier New", monospace;
+  font-size: 64px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+}
+#date { margin-top: 10px; color: #9ca3af; }
+
+.countdown { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.countdown div {
+  background: #0a0f1e;
+  border: 1px solid #8b5cf6;
+  border-radius: 12px;
+  padding: 15px 20px;
+  min-width: 90px;
+}
+.countdown span { display: block; font-size: 36px; font-weight: bold; color: white; }
+.countdown small { color: #9ca3af; }
+
+input[type="datetime-local"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #0a0f1e;
+  color: white;
+  font-size: 16px;
+}
+button {
+  padding: 10px 24px;
+  margin-left: 8px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover { background: #7c3aed; transform: scale(1.05); }
+
+footer { text-align: center; padding: 20px; background: #080c18; color: #9ca3af; }
+
+@media (max-width: 600px) {
+  #clock { font-size: 40px; }
+  button { margin: 10px 0 0 0; }
+}
